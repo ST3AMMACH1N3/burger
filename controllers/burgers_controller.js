@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 router.post('/api/burger', (req, res) => {
     burger.create(req.body.name, () => {
-        res.end();
+        res.redirect('/');
     });
 });
 
