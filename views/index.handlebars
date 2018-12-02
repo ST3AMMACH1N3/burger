@@ -4,20 +4,22 @@
     {{#each burgers}}
         {{#unless devoured}}
             <li>
-                <div>
-                    {{burger_name}}
+                <span class="item">
+                    <span class="burger-name">{{burger_name}}</span>
                     <button data-id={{id}} class="devour-btn">Devour</button>
-                </div>
+                </span>
             </li>
         {{/unless}}
     {{/each}}
 </ul>
 
+<h2>That was Delicious!</h2>
+
 <ul>
     {{#each burgers}}
         {{#if devoured}}
             <li>
-                <div>
+                <div class="item devoured">
                     {{burger_name}}
                 </div>
             </li>
